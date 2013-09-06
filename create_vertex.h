@@ -20,9 +20,10 @@ namespace myopengl
 			GLuint	vboid;
 			GLuint	indexBufferId;
 		public:
-			vertexobj(myopengl::vertex*        vertices, GLubyte*        indices);
+			vertexobj(vertex*      vertices, GLubyte*        indices,size_t vertice_t, size_t indice_t);
 			~vertexobj();
 			void	vertexDraw();
+			void	rotate(int	key);
 	};
 
 

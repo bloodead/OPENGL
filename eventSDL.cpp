@@ -4,8 +4,8 @@ int sdl::event_sdl::event_listen()
 {		
 	//	SDL_WaitEvent(&event);
 	//	SDL_Delay(10);
-	while (true ==	SDL_PollEvent(&event))
-	{
+	SDL_PollEvent(&event);
+
 		switch(event.type)
 		{
 			case SDL_QUIT:
@@ -13,16 +13,16 @@ int sdl::event_sdl::event_listen()
 			case SDL_KEYDOWN:
 				if (event.key.keysym.sym == SDLK_UP)
 					return 10;
-				if (event.key.keysym.sym = SDLK_DOWN)
+				if (event.key.keysym.sym == SDLK_DOWN)
 					return 11;
-				if (event.key.keysym.sym = SDLK_LEFT)
+				if (event.key.keysym.sym == SDLK_LEFT)
 					return 12;
-				if (event.key.keysym.sym = SDLK_RIGHT)
+				if (event.key.keysym.sym == SDLK_RIGHT)
 					return 13;
-                if(event.key.keysym.sym = SDLK_ESCAPE)
+                if(event.key.keysym.sym == SDLK_ESCAPE)
                     return 8;
 		}
-	}
+	
 	return 0;
 }
 

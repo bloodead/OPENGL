@@ -1,7 +1,9 @@
 SRC =	main.cpp	\
 	sdl_init.cpp	\
 	eventSDL.cpp 	\
-	create_vertex.cpp
+	create_vertex.cpp	\
+	create_shader.cpp	\
+	camera.cpp
 HOME = ~
 OBJ = $(SRC:.cpp=.o)
 
